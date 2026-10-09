@@ -783,3 +783,20 @@ body {
     letter-spacing: .06em;
   }
 }
+/* 모바일 한글 본문 줄바꿈 개선 */
+@media (max-width: 760px) {
+
+  .hero .intro {
+    font-size: 14px;
+    line-height: 1.8;
+
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .project-note,
+  .about-grid p {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+}
