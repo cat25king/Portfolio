@@ -596,3 +596,190 @@ body {
     overflow-wrap: anywhere;
   }
 }
+
+/* ========================================
+   MOBILE FINAL POLISH
+======================================== */
+@media (max-width: 760px) {
+
+  /* ---------- HEADER ---------- */
+
+  .nav {
+    height: 68px;
+    padding: 0 16px;
+    gap: 14px;
+  }
+
+  .brand {
+    white-space: nowrap;
+    max-width: none;
+    flex-shrink: 0;
+    font-size: 11px !important;
+    letter-spacing: .08em !important;
+  }
+
+  .nav nav {
+    gap: 13px;
+    flex-shrink: 0;
+  }
+
+  .nav nav a {
+    font-size: 10px;
+    letter-spacing: .09em;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(56px, 16vw, 78px);
+    line-height: .86;
+  }
+
+  .hero-intro {
+    margin-top: 40px;
+  }
+
+  .hero .intro {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+
+  /* ---------- WORK ---------- */
+
+  .works {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section-head {
+    margin-bottom: 55px;
+  }
+
+  .project {
+    margin-bottom: 100px;
+  }
+
+  .project h2 {
+    font-size: clamp(44px, 12vw, 58px);
+    line-height: .92;
+  }
+
+  .project-title p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 22px;
+  }
+
+  /* 프로젝트 설명 한글 */
+  .project-note {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 30px;
+  }
+
+  .project-note p {
+    max-width: 100%;
+  }
+
+  .project-note div {
+    margin-top: 24px;
+  }
+
+
+  /* ---------- MEDIA ---------- */
+
+  .project01-media .project-subs,
+  .project02-media {
+    gap: 8px !important;
+  }
+
+  .showreel-side {
+    gap: 8px;
+  }
+
+
+  /* ---------- ABOUT ---------- */
+
+  .about {
+    padding: 70px 20px;
+  }
+
+  .about .section-head {
+    margin-bottom: 70px;
+  }
+
+  .about h2 {
+    font-size: clamp(48px, 13vw, 64px);
+    line-height: .92;
+  }
+
+  .about-grid p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  /* SKILLS 대형 글자 너무 커지는 것 방지 */
+  .about h2 + h2,
+  .about .skills-title {
+    font-size: clamp(38px, 10.5vw, 52px);
+    line-height: 1.02;
+    overflow-wrap: normal;
+    word-break: keep-all;
+  }
+
+
+  /* ---------- SKILL TAG ---------- */
+
+  .skills {
+    gap: 8px;
+    margin-top: 36px;
+  }
+
+  .skills span {
+    padding: 10px 15px;
+    font-size: 9px;
+    letter-spacing: .1em;
+  }
+
+
+  /* ---------- CONTACT ---------- */
+
+  .contact {
+    padding: 65px 20px 35px;
+  }
+
+  .contact p {
+    font-size: 10px;
+    letter-spacing: .14em;
+  }
+}
+/* 아주 좁은 모바일 - 헤더 한 줄 유지 */
+@media (max-width: 420px) {
+  .nav {
+    padding-left: 12px;
+    padding-right: 12px;
+    gap: 8px;
+  }
+
+  .brand {
+    white-space: nowrap;
+    font-size: 10px !important;
+    letter-spacing: .04em !important;
+  }
+
+  .nav nav {
+    gap: 10px;
+  }
+
+  .nav nav a {
+    font-size: 9px;
+    letter-spacing: .06em;
+  }
+}
