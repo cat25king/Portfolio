@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@1,500&display=swap');
+:root{--bg:#f1f0eb;--ink:#111;--muted:#73736d;--line:#c9c8c1;--dark:#161616;--accent:#a8ff3e}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(241,240,235,.88);backdrop-filter:blur(14px);z-index:20}.nav a{color:inherit;text-decoration:none;font-size:12px;letter-spacing:.12em}.nav nav{display:flex;gap:30px}.brand{font-weight:600}.hero{padding:10vh 4vw 6vw}.eyebrow,.section-head{font-size:11px;letter-spacing:.16em}.hero h1{font-size:clamp(72px,12vw,180px);line-height:.78;letter-spacing:-.065em;margin:5vh 0 5vh;font-weight:500}.hero h1 em,.about h2 em{font-family:'Playfair Display',serif;font-weight:500}.intro{font-size:clamp(15px,1.35vw,21px);line-height:1.6;margin-left:50%;max-width:620px}.scroll{display:inline-block;margin:8vh 0 2vh;color:inherit;text-decoration:none;font-size:11px;letter-spacing:.16em}.media-shell{background:var(--dark);position:relative;overflow:hidden;min-height:280px}.hero-media{height:min(72vh,780px)}.media-shell video,.media-shell img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;z-index:2}.media-shell video:not(:has(source[src=""])){background:#111}.placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#eee;gap:10px;background:radial-gradient(circle at 50% 45%,#303030,#111 65%)}.placeholder span{font-size:13px;letter-spacing:.2em}.placeholder small{color:#777}.works,.about{padding:7vw 4vw}.section-head{display:flex;justify-content:space-between;border-top:1px solid var(--ink);padding-top:12px;margin-bottom:8vw}.project{margin-bottom:14vw}.project-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:3vw}.project-title>div{display:flex;gap:2vw;align-items:start}.num{font-size:12px;margin-top:10px}.project h2{font-size:clamp(48px,7vw,108px);letter-spacing:-.055em;line-height:.84;margin:0;font-weight:500}.project-title p{font-size:12px;line-height:1.7;text-align:right;color:var(--muted)}.project-title b{color:var(--ink)}.media-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:320px 320px;gap:12px}.large-left figure:first-child{grid-row:1/3}.large-right figure:last-child{grid-column:2;grid-row:1/3}.media-grid figure{margin:0}.project-note{display:grid;grid-template-columns:1.3fr .7fr;gap:10vw;margin:2vw 0 0 50%;font-size:13px;line-height:1.7}.project-note p{margin:0}.project-note div{color:var(--muted)}.project-note span{display:block;font-size:10px;letter-spacing:.15em;color:var(--ink);margin-bottom:7px}.about{background:var(--dark);color:#eee}.about .section-head{border-color:#666}.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:8vw;align-items:end}.about h2{font-size:clamp(55px,8vw,120px);line-height:.88;letter-spacing:-.055em;margin:0;font-weight:500}.about-grid p{font-size:17px;line-height:1.8;color:#bbb}.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:40px}.skills span{border:1px solid #555;border-radius:999px;padding:10px 14px;font-size:10px;letter-spacing:.12em}.contact{background:var(--accent);padding:8vw 4vw 3vw}.contact p{font-size:11px;letter-spacing:.16em}.contact a{display:block;color:#111;text-decoration:none;font-size:clamp(40px,8vw,120px);letter-spacing:-.06em;margin:5vw 0 8vw;border-bottom:2px solid #111;padding-bottom:1vw}.contact small{font-size:10px;letter-spacing:.12em}@media(max-width:760px){.nav nav{gap:14px}.hero{padding-top:8vh}.intro{margin-left:0}.hero-media{height:55vh}.project-title{display:block}.project-title p{text-align:left;margin-top:24px}.media-grid{display:block}.media-grid figure{height:55vh;margin-bottom:10px}.project-note{margin:20px 0 0;grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.about-grid>div{margin-top:40px}.section-head{margin-bottom:14vw}}
+.hero-media {
+    width: calc(100% + 6vw);
+    margin-left: -3vw;
+}
+
+/* ========================================
+   PROJECT 01
+   MAIN 16:9 + SUB 6개
+======================================== */
+
+.project01-media {
+    display: block !important;
+    width: 100%;
+}
+
+/* 메인 영상 */
+.project01-media .project-main {
+    width: 82% !important;
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    position: relative;
+}
+
+/* 메인 영상 전체 표시 */
+.project01-media .project-main video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+}
+
+/* 서브 6개 영역 */
+.project01-media .project-subs {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+
+    width: 82%;
+    margin: 24px auto 0;
+
+    gap: 16px;
+}
+
+/* 서브 각각의 크기 */
+.project01-media .sub-media {
+    width: 100% !important;
+
+    /* 1:1보다 세로가 조금 짧은 비율 */
+    aspect-ratio: 4 / 3;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    position: relative;
+}
+
+/* 서브 MP4 */
+.project01-media .sub-media video {
+    width: 100%;
+    height: 100%;
+
+    /* 영상 잘리지 않게 */
+    object-fit: contain !important;
+}
+
+
+/* ========================================
+   PROJECT 02
+   GIF 9개 / 3 × 3
+======================================== */
+
+.project02-media {
+    display: grid !important;
+
+    /* 가로 3개 */
+    grid-template-columns: repeat(3, 1fr) !important;
+
+    width: 82%;
+    margin: 0 auto;
+
+    gap: 16px;
+}
+
+/* GIF 각각 */
+.project02-media .project02-item {
+    width: 100% !important;
+
+    /* 정사각형 */
+    aspect-ratio: 1 / 1;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    position: relative;
+}
+
+/* GIF 전체 표시 */
+.project02-media .project02-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain !important;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 760px) {
+
+    /* 프로젝트 1 메인 */
+    .project01-media .project-main {
+        width: 100% !important;
+    }
+
+    /* 프로젝트 1 서브 */
+    .project01-media .project-subs {
+        width: 100%;
+
+        /* 모바일에서는 2개씩 */
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 10px;
+    }
+
+    /* 프로젝트 2 */
+    .project02-media {
+        width: 100%;
+
+        /* 모바일에서는 2개씩 */
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 10px;
+    }
+}
+
+/* 메인 쇼릴 16:9 비율 */
+.hero-media {
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+}
+
+/* 모바일에서도 16:9 유지 */
+@media (max-width: 760px) {
+  .hero-media {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* 프로필 사진 + 자기소개 */
+.hero-intro {
+  width: 65%;
+  margin-left: 45%;  /* 기존 50% → 35% */
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-intro .intro {
+  margin-left: 0;
+  flex: 1;
+}
+
+.profile-img {
+  width: 180px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  flex-shrink: 0;
+  transform: none;
+}
+
+/* 모바일 */
+@media (max-width: 760px) {
+  .hero-intro {
+    width: 100%;
+    margin-left: 0;
+    gap: 20px;
+  }
+
+  .profile-img {
+    width: 120px;
+  }
+}
+
+/* ========================================
+   DARK + LAVENDER THEME
+======================================== */
+
+/* 전체 컬러 변경 */
+:root {
+  --bg: #17171b;
+  --ink: #f1eff7;
+  --muted: #aaa7b2;
+  --line: #3b3942;
+  --dark: #101014;
+  --accent: #cfc3ff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+
+/* ========================================
+   HERO - 풀스크린 라벤더 그라데이션
+======================================== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  /* 화면 최상단부터 충분히 퍼지도록 */
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      ellipse 100% 80% at 50% 0%,
+      rgba(207, 195, 255, 0.32) 0%,
+      rgba(190, 175, 245, 0.20) 30%,
+      rgba(170, 155, 225, 0.08) 55%,
+      transparent 78%
+    ),
+    #17171b;
+}
+
+
+/* 제목은 그라데이션 위에 */
+.hero h1,
+.hero .eyebrow,
+.hero .intro,
+.hero .scroll,
+.hero-intro {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* 기존 제목 뒤 그라데이션 제거 */
+.hero h1::before {
+  display: none;
+}
+
+
+/* ========================================
+   상단 네비게이션
+======================================== */
+
+.nav {
+  background: rgba(23, 23, 27, 0.78);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+  color: var(--ink);
+  backdrop-filter: blur(18px);
+}
+
+
+/* ========================================
+   WORK 영역
+======================================== */
+
+.works {
+  background: #17171b;
+}
+
+.section-head {
+  border-color: #55515e;
+}
+
+.project-title p,
+.project-note div {
+  color: var(--muted);
+}
+
+.project-title b,
+.project-note span {
+  color: var(--ink);
+}
+
+
+/* ========================================
+   ABOUT 영역 - 조금 더 어둡게 구분
+======================================== */
+
+.about {
+  background: #101014;
+}
+
+.about .section-head {
+  border-color: #45424c;
+}
+
+
+/* ========================================
+   CONTACT - 라벤더 포인트
+======================================== */
+
+.contact {
+  background: #cfc3ff;
+  color: #17171b;
+}
+
+.contact a {
+  color: #17171b;
+  border-color: #17171b;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap');
+
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+
+.hero h1 em {
+  font-size: 0.75em;
+}
+
+/* ==============================
+   MAIN SHOWREEL GRID
+============================== */
+
+.showreel-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  align-items: stretch;
+}
+
+
+/* 왼쪽 메인 */
+.showreel-main {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+}
+
+
+/* 오른쪽 영역 */
+.showreel-side {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* 오른쪽 서브 영상 4:3 */
+.showreel-sub {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+}
+
+
+/* 영상 꽉 채우기 */
+.showreel-grid video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* 모바일 */
+@media (max-width: 760px) {
+
+  .showreel-grid {
+    display: block;
+  }
+
+  .showreel-main {
+    margin-bottom: 12px;
+  }
+
+  .showreel-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+.showreel-grid {
+  width: 85%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.project-note {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* PROJECT 02 - e/f/g MP4 원본 비율 유지 */
+.project02-media .project02-item video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
