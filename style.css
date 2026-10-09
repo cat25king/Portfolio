@@ -458,3 +458,141 @@ body {
     aspect-ratio: 4 / 3;
   }
 }
+
+/* ========================================
+   MOBILE POLISH - FINAL
+======================================== */
+@media (max-width: 760px) {
+
+  /* 전체 좌우 여백 */
+  .works,
+  .about {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* 상단 네비 */
+  .nav {
+    height: 64px;
+    padding: 0 20px;
+  }
+
+  .nav nav {
+    gap: 16px;
+  }
+
+  .nav a {
+    font-size: 10px;
+  }
+
+  .brand {
+    max-width: 150px;
+    line-height: 1.25;
+  }
+
+
+  /* WORK 구분선 */
+  .section-head {
+    margin-bottom: 64px;
+  }
+
+
+  /* 프로젝트 번호 + PROJECT */
+  .project-title > div {
+    gap: 12px;
+  }
+
+  .num {
+    margin-top: 5px;
+  }
+
+  /* PROJECT 글자 크기 */
+  .project h2 {
+    font-size: clamp(42px, 13vw, 62px);
+    line-height: .9;
+    letter-spacing: -.055em;
+  }
+
+  /* 작품 설명 */
+  .project-title p {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+
+  /* 프로젝트끼리 간격 */
+  .project {
+    margin-bottom: 110px;
+  }
+
+
+  /* 프로젝트 설명 */
+  .project-note {
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+
+  /* 메인 쇼릴 */
+  .showreel-grid {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  .showreel-main {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 10px;
+  }
+
+  /* 개인작 2개 */
+  .showreel-side {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .showreel-sub {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+
+  /* PROJECT 01 개인작 */
+  .project01-media .project-subs {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px;
+  }
+
+  /* PROJECT 02 */
+  .project02-media {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px;
+  }
+
+
+  /* ABOUT */
+  .about h2 {
+    font-size: clamp(46px, 14vw, 68px);
+  }
+
+  .about-grid p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+
+  /* CONTACT */
+  .contact {
+    padding: 80px 20px 30px;
+  }
+
+  .contact a {
+    font-size: clamp(36px, 11vw, 56px);
+    overflow-wrap: anywhere;
+  }
+}
