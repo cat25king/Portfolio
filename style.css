@@ -431,3 +431,30 @@ body {
   }
 }
 
+/* ===== SHOWREEL MOBILE FINAL FIX ===== */
+@media (max-width: 760px) {
+
+  .showreel-grid {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  .showreel-main {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 10px;
+  }
+
+  .showreel-side {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .showreel-sub {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+}
